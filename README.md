@@ -1,4 +1,4 @@
-# modurator
+# modurater
 
 ## Why
 
@@ -6,16 +6,17 @@ Whith 50k+ modules on npm finding the right module for the problem you have is b
 be. Especially newcomers to nodejs are overwhelmed with the amount of modules to choose from.
 
 While github stars/issues/etc. give some indication of the state and quality of a module, it simply isn't sufficient.
-modurator aims to enhance this information with the ability to downvote problematic modules and wheigh these votes
+modurater aims to enhance this information with the ability to downvote problematic modules and wheigh these votes
 according to the credibility of the voter in the community.
 
-The goal is a self moderated rating system for modules published on npm. 
+The goal is a community moderated rating system for modules published on npm. 
 
-This will be combined with a search that takes these ratings into account.
+This will be combined with a search that takes these ratings into account to sort results returned by the current npm
+search.
 
 ## How it works
 
-modurator combines github stars with the ability to downvote a module.
+modurater combines github stars with the ability to downvote a module.
 
 - upvotes are derrived from github stars and can only be performed by starring on github
 - downvotes are only possible if a person has a credit of downvote stars 
@@ -45,6 +46,11 @@ credibility is derrived from the following:
 - how many upvotes/downvotes modules by the downvoter received
 - accepted PRs performed by the user 
 
+### Upvotes
+
+Call into github to star the module in question. Additionally they allow the voter to include a comment that indicates
+what the module does particularly well.
+
 ### Downvotes
 
 When a user performs a downvote he will be forced to comment on the reason for it.
@@ -60,7 +66,7 @@ Aside from a custom downvote comment the following shortcuts make sense:
 - slow or no reaction to issues (provide link)
 - buggy (provide sample or point to issue)
 - code is hard to understand
-- code is not javascript
+- code is not javascript and therefore makes it hard to contribute
 
 ### Available Downvotes
 
@@ -74,3 +80,9 @@ Each downvote is weighed according to the credibility of the downvoter.
 
 i.e. a downvote of someone with a credibility of 1000 may affect the module's Rating Score 10x as much as a downvote of
 someone with a credibility of 100.
+
+## github interaction
+
+Aside from syncing with github stars, modurater will require or at least encourage a downvoter to create a related
+issue. When an issue is created by a user on github and no downvote occurred, he will be encouraged to do so the next
+time he comes to modurater.
