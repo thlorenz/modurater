@@ -2,6 +2,11 @@
 
 Community driven rating system for nodejs modules on npm in order to help in selecting the right one. 
 
+## Discuss
+
+In order to make discussing these ideas easier, I created an [exact copy of this readme as a
+gist](https://gist.github.com/thlorenz/5610508).
+
 ## Why
 
 Whith 50k+ modules on npm finding the right module for the problem you have is becoming more tedious than it needs to
