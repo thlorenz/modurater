@@ -1,5 +1,7 @@
 # modurater
 
+Community driven rating system for nodejs modules on npm in order to help in selecting the right one. 
+
 ## Why
 
 Whith 50k+ modules on npm finding the right module for the problem you have is becoming more tedious than it needs to
